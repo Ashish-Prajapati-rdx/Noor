@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 const StageTwo = () => {
-  // Animation settings for the letters
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -33,7 +32,6 @@ const StageTwo = () => {
 
   return (
     <div className="z-10 relative flex flex-col items-center justify-center min-h-screen w-full bg-transparent">
-      {/* 1. Animated Glowing Moon Icon */}
       <motion.div
         initial={{ scale: 0, rotate: -180 }}
         animate={{ scale: 1, rotate: 0 }}
@@ -43,7 +41,6 @@ const StageTwo = () => {
         🌙
       </motion.div>
 
-      {/* 2. Main Title: EID MUBARAK */}
       <motion.div
         variants={container}
         initial="hidden"
@@ -65,7 +62,6 @@ const StageTwo = () => {
         ))}
       </motion.div>
 
-      {/* 3. Subtitle: MADAM JI */}
       <motion.div
         initial={{ opacity: 0, letterSpacing: "0.2em" }}
         animate={{ opacity: 1, letterSpacing: "0.8em" }}
@@ -75,7 +71,6 @@ const StageTwo = () => {
         Madam Ji
       </motion.div>
 
-      {/* 4. Decorative Animated Line */}
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: "150px" }}
@@ -83,7 +78,6 @@ const StageTwo = () => {
         className="h-[1px] bg-gradient-to-r from-transparent via-yellow-500 to-transparent mt-8"
       />
 
-      {/* 5. Floating Sparkles (Background Layer) */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(15)].map((_, i) => (
           <motion.div

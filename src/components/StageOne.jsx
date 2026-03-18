@@ -7,9 +7,6 @@ const StageOne = ({ onProceed }) => {
       animate={{ opacity: 1 }}
       className="z-10 relative flex items-center justify-center min-h-screen w-full bg-slate-950 overflow-hidden"
     >
-      {/* --- EXTRA LIGHTING SECTION --- */}
-
-      {/* 1. Top Left Blue-ish Glow */}
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
@@ -19,7 +16,6 @@ const StageOne = ({ onProceed }) => {
         className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-indigo-600 rounded-full blur-[150px]"
       />
 
-      {/* 2. Bottom Right Gold Glow */}
       <motion.div
         animate={{
           scale: [1.2, 1, 1.2],
@@ -29,7 +25,6 @@ const StageOne = ({ onProceed }) => {
         className="absolute -bottom-20 -right-20 w-[500px] h-[500px] bg-yellow-700 rounded-full blur-[150px]"
       />
 
-      {/* 3. Central Pulsing Aura (Jo pehle tha but improved) */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{
@@ -41,14 +36,12 @@ const StageOne = ({ onProceed }) => {
         />
       </div>
 
-      {/* --- CONTENT CARD --- */}
       <motion.div
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         className="relative group p-[1.5px] rounded-[30px] overflow-hidden"
       >
-        {/* Border Light Beam Effect (Isse card ke edge chamkenge) */}
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
@@ -56,7 +49,6 @@ const StageOne = ({ onProceed }) => {
         />
 
         <div className="relative bg-slate-950/90 backdrop-blur-3xl p-12 rounded-[29px] text-center max-w-sm border border-white/5 shadow-2xl">
-          {/* Glowing Diamond Icon */}
           <div className="relative mb-8">
             <div className="absolute inset-0 bg-yellow-500/20 blur-xl rounded-full" />
             <motion.div
@@ -68,7 +60,6 @@ const StageOne = ({ onProceed }) => {
             </motion.div>
           </div>
 
-          {/* Typography */}
           <h2 className="text-3xl font-extralight text-white tracking-[0.2em] mb-4">
             MAHENOOR
           </h2>
@@ -76,7 +67,7 @@ const StageOne = ({ onProceed }) => {
 
           <div className="mb-10">
             <p className="text-slate-300 text-lg md:text-xl leading-relaxed italic tracking-wide font-light">
-              "Humare toh naam mein hi noor hai{" "}
+              "Tumhare toh naam mein hi noor hai{" "}
               <span className="text-yellow-500 font-medium">Mahenoor</span>,
             </p>
             <p className="text-slate-300 text-lg md:text-xl leading-relaxed italic tracking-wide font-light mt-2">
@@ -92,12 +83,10 @@ const StageOne = ({ onProceed }) => {
             </p>
           </div>
 
-          {/* Improved Royal Button with Inner Shimmer */}
           <button
             onClick={onProceed}
             className="w-full py-4 relative group overflow-hidden border border-yellow-600/50 rounded-lg transition-all duration-500 hover:border-yellow-400"
           >
-            {/* Shimmer Effect on Hover */}
             <motion.div
               animate={{ x: ["-100%", "200%"] }}
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
